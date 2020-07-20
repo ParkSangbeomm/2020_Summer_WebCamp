@@ -1,0 +1,18 @@
+HTML Tutorial
+  HTML HOME : <!DOCTYPE html> - DTD = Document Type Definition = DOCTYPE , html5 버전의 독타입을 의미한다.
+              <head> - 페이지를 열 때 브라우저에 표시되지 않는다. 대신에 페이지에 metadata를 포함
+              <title> - 웹 페이지의 제목을 나타내는 태그임. 본문에는 보이지 않으며 브라우저의 탭 등에서 확인할 수 있음.
+              <body> - 문서의 몸통을 나타내는 태그이며 브라우저 화면에 보이는 것들이 주로 들어감.
+              <h#> - 숫자가 작을수록 글자의 크기가 커짐.
+              <p> - paragraph의 약자로 하나의 문단을 만들 때 사용됨.
+              <br> - 엔터키
+  HTML Basic : <a> - HTML link는 a 태그를 이용한다. 
+                      ex) <a href="https://www.naver.com">This is a link</a>
+               <img> - HTML img는 img 태그를 이용한다. 사진 없으면 alt에 적어놓은 내용이 글로 보임. 마지막 두 파라미터는 사이즈
+                      ex) <img src="w3schools.jpg" alt="W3Schools.com" width="104 height="142">
+  HTML Attributes : style Attribute - color, font, size와 같은 내용을 추가해줌
+                      ex) <p style="color:red;">Something else</p>
+                    lang Attribe - html 언어 선택하는 태그
+                      ex) <html lang="en">
+                    title Attribue - 그 부분에 마우스 가져가면 조그마하게 글씨나옴
+                      ex) <p title="I'm a tooltip">This is a paragraph.</p>
