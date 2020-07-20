@@ -1,4 +1,5 @@
 HTML Tutorial
+Commets = <!-- ~~~ -->
   HTML HOME : <!DOCTYPE html> - DTD = Document Type Definition = DOCTYPE , html5 버전의 독타입을 의미한다.
               <head> - 페이지를 열 때 브라우저에 표시되지 않는다. 대신에 페이지에 metadata를 포함
               <title> - 웹 페이지의 제목을 나타내는 태그임. 본문에는 보이지 않으며 브라우저의 탭 등에서 확인할 수 있음.
@@ -16,3 +17,54 @@ HTML Tutorial
                       ex) <html lang="en">
                     title Attribue - 그 부분에 마우스 가져가면 조그마하게 글씨나옴
                       ex) <p title="I'm a tooltip">This is a paragraph.</p>
+  HTML Headings : style - font-size:npx;
+                      ex) <h1 style="font-size:60px;">Heading 1</h1>
+  HTML Paragraphs : <pre> - 그 안 내용은 그대로임
+  HTML Styles : Property 의 경우에 따라 나열하면
+                Use the style attribute for styling HTML elements
+                Use background-color for background color
+                Use color for text colors
+                Use font-family for text fonts
+                Use font-size for text sizes
+                Use text-align for text alignment
+                
+                기본 포맷이 <tagname style = "property:value;"> 이다.
+  HTML Formatting : <b> - Bold text
+                    <strong> - Important text
+                    <i> - Italic text
+                    <em> - Emphasized text
+                    <mark> - Marked text
+                    <small> - Smaller text
+                    <del> - Deleted text
+                    <ins> - Inserted text
+                    <sub> - Subscript text
+                    <sup> - Superscript text
+  HTML Colors : 색을 표현하는 방법이 세가지로 나뉜다.
+                RGB - rgb(255,255,255)
+                HEX - #ff6347
+                HSL - hsl(9,100%,64%)
+  HTML CSS : CSS란Cascading Style Sheets의 풀네임을 가진다.
+             세가지가 있는데 inline에서 style로 지정을 하는바, 스타일을 모아서 헤드에 모아놓는법, 외부에 css파일을 
+             놔두고 그 파일을 이용하는 것, 이렇게이다.
+  HTML Links(Colors) : head부분에 모아놓을 경우에 a태그에 상태에 따라서 색과 배경, 데코를 바꿀 수 있다. 
+                       <style>
+                        a:link {
+                          color: green;
+                          background-color: transparent;
+                          text-decoration: none;
+                        }
+
+                        a:visited {
+                          color: pink;
+                          background-color: transparent;
+                          text-decoration: none;
+                        }
+                        위에 올려놓은 예제처럼 밀이다.
+  HTML Tables : <table> - 테이블 정의
+                <tr> - 테이블 row
+                <td> - 테이블 데이터 정하기
+                <th> - 테이블 헤딩
+                <caption> - 테이블 캡션
+                <border> - 테두리 설정
+                id - 고유한 id값으로 테이블 css를 정의할 수 있다.
+  HTML Lists : 
