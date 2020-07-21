@@ -1,5 +1,7 @@
 HTML Tutorial
+
 Commets = <!-- ~~~ -->
+
   HTML HOME : <!DOCTYPE html> - DTD = Document Type Definition = DOCTYPE , html5 버전의 독타입을 의미한다.
               <head> - 페이지를 열 때 브라우저에 표시되지 않는다. 대신에 페이지에 metadata를 포함
               <title> - 웹 페이지의 제목을 나타내는 태그임. 본문에는 보이지 않으며 브라우저의 탭 등에서 확인할 수 있음.
@@ -7,19 +9,24 @@ Commets = <!-- ~~~ -->
               <h#> - 숫자가 작을수록 글자의 크기가 커짐.
               <p> - paragraph의 약자로 하나의 문단을 만들 때 사용됨.
               <br> - 엔터키
+              
   HTML Basic : <a> - HTML link는 a 태그를 이용한다. 
                       ex) <a href="https://www.naver.com">This is a link</a>
                <img> - HTML img는 img 태그를 이용한다. 사진 없으면 alt에 적어놓은 내용이 글로 보임. 마지막 두 파라미터는 사이즈
                       ex) <img src="w3schools.jpg" alt="W3Schools.com" width="104 height="142">
+                      
   HTML Attributes : style Attribute - color, font, size와 같은 내용을 추가해줌
                       ex) <p style="color:red;">Something else</p>
                     lang Attribe - html 언어 선택하는 태그
                       ex) <html lang="en">
                     title Attribue - 그 부분에 마우스 가져가면 조그마하게 글씨나옴
                       ex) <p title="I'm a tooltip">This is a paragraph.</p>
+  
   HTML Headings : style - font-size:npx;
                       ex) <h1 style="font-size:60px;">Heading 1</h1>
+ 
   HTML Paragraphs : <pre> - 그 안 내용은 그대로임
+  
   HTML Styles : Property 의 경우에 따라 나열하면
                 Use the style attribute for styling HTML elements
                 Use background-color for background color
@@ -39,13 +46,16 @@ Commets = <!-- ~~~ -->
                     <ins> - Inserted text
                     <sub> - Subscript text
                     <sup> - Superscript text
+  
   HTML Colors : 색을 표현하는 방법이 세가지로 나뉜다.
                 RGB - rgb(255,255,255)
                 HEX - #ff6347
                 HSL - hsl(9,100%,64%)
+  
   HTML CSS : CSS란Cascading Style Sheets의 풀네임을 가진다.
              세가지가 있는데 inline에서 style로 지정을 하는바, 스타일을 모아서 헤드에 모아놓는법, 외부에 css파일을 
              놔두고 그 파일을 이용하는 것, 이렇게이다.
+  
   HTML Links(Colors) : head부분에 모아놓을 경우에 a태그에 상태에 따라서 색과 배경, 데코를 바꿀 수 있다. 
                        <style>
                         a:link {
@@ -60,6 +70,7 @@ Commets = <!-- ~~~ -->
                           text-decoration: none;
                         }
                         위에 올려놓은 예제처럼 밀이다.
+  
   HTML Tables : <table> - 테이블 정의
                 <tr> - 테이블 row
                 <td> - 테이블 데이터 정하기
@@ -67,22 +78,29 @@ Commets = <!-- ~~~ -->
                 <caption> - 테이블 캡션
                 <border> - 테두리 설정
                 id - 고유한 id값으로 테이블 css를 정의할 수 있다.
+  
   HTML Lists : <ul> - unordered list
                <ol> - ordered list
                <li> - list item
                <dl> - description list
                <dt> - Defines term in a description list
                <dd> - Describes term in a description list
+  
   HTML Block & Inline : block-level element 들은 한 줄을 다 사용하며 시작할 떄 새로운 줄로 시작한다.
                           ex) - <div>, <article>, <aside>, <blockquote> ,<canvas>, <dd> ,<dl>, <dt>, <fieldset>, <figcaption> ...
                         Inline-level element 들은 필요한 만큼의 공간만 사용하며 새로운 줄에서 시작하지 않는다.
                           ex) - <span>, <a>, <abbr>, <acronym>, <b>, <bdo>, <big>
+  
   HTML Classes : head의 style 부분에 .note{} 이런 식으로 클래스를 만들어 놓고 나중에 다른 태그들을 이용할 때
                  <span class = "note"> 이런식으로 사용하면 그 클래스를 사용할 수 있다.
+  
   HTML Id : 얘도 head style 부분에 #myHeader{} 이런 식으로 적어놓으면 사용할 수 있다.
             class 와 id 의 차이는 클래스는 여러번 사용할 수 있지만 id는 한 파일안에 한번만 사용할 수 있다.
+  
   HTML iframe : 페이지 안에 페이지 넣기. 형태는 다음과 같다. <iframe src="url title="description">
+  
   HTML JavaScrippt : <script> 안 내용은 자바스크립트 코드이다. 만약 브라우저가 지원하지 않을경우 <nonscript> 안 내용이 나온다.
+  
   HTML Layout :         header           <-----이런 느낌임. 태그들은 <header>, <nav>, <section>, <article>
                           nav                                       <aside>, <footer>, <details>, <summary> 가 있다.
                     section
@@ -95,6 +113,7 @@ Commets = <!-- ~~~ -->
                       <samp> - computer output 보여 주고 싶을 때 사용
                       <var> - 변수
                       <pre> - 형식화된 텍스트
+  
   HTML Symbols : https://www.w3schools.com/html/html_symbols.asp 들어가서 보면 될듯
+  
   HTML Emojis : 이미지는 아닌데 이모티콘 같은 친구들 https://www.w3schools.com/html/html_emojis.asp
-  HTML
