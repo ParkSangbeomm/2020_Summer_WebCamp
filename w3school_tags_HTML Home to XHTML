@@ -67,4 +67,21 @@ Commets = <!-- ~~~ -->
                 <caption> - 테이블 캡션
                 <border> - 테두리 설정
                 id - 고유한 id값으로 테이블 css를 정의할 수 있다.
-  HTML Lists : 
+  HTML Lists : <ul> - unordered list
+               <ol> - ordered list
+               <li> - list item
+               <dl> - description list
+               <dt> - Defines term in a description list
+               <dd> - Describes term in a description list
+  HTML Block & Inline : block-level element 들은 한 줄을 다 사용하며 시작할 떄 새로운 줄로 시작한다.
+                          ex) - <div>, <article>, <aside>, <blockquote> ,<canvas>, <dd> ,<dl>, <dt>, <fieldset>, <figcaption> ...
+                        Inline-level element 들은 필요한 만큼의 공간만 사용하며 새로운 줄에서 시작하지 않는다.
+                          ex) - <span>, <a>, <abbr>, <acronym>, <b>, <bdo>, <big>
+  HTML Classes : head의 style 부분에 .note{} 이런 식으로 클래스를 만들어 놓고 나중에 다른 태그들을 이용할 때
+                 <span class = "note"> 이런식으로 사용하면 그 클래스를 사용할 수 있다.
+  HTML Id : 얘도 head style 부분에 #myHeader{} 이런 식으로 적어놓으면 사용할 수 있다.
+            class 와 id 의 차이는 클래스는 여러번 사용할 수 있지만 id는 한 파일안에 한번만 사용할 수 있다.
+  HTML iframe : 페이지 안에 페이지 넣기. 형태는 다음과 같다. <iframe src="url title="description">
+  HTML
+  HTML
+  HTML
