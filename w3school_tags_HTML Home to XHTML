@@ -82,6 +82,19 @@ Commets = <!-- ~~~ -->
   HTML Id : 얘도 head style 부분에 #myHeader{} 이런 식으로 적어놓으면 사용할 수 있다.
             class 와 id 의 차이는 클래스는 여러번 사용할 수 있지만 id는 한 파일안에 한번만 사용할 수 있다.
   HTML iframe : 페이지 안에 페이지 넣기. 형태는 다음과 같다. <iframe src="url title="description">
-  HTML
-  HTML
+  HTML JavaScrippt : <script> 안 내용은 자바스크립트 코드이다. 만약 브라우저가 지원하지 않을경우 <nonscript> 안 내용이 나온다.
+  HTML Layout :         header           <-----이런 느낌임. 태그들은 <header>, <nav>, <section>, <article>
+                          nav                                       <aside>, <footer>, <details>, <summary> 가 있다.
+                    section
+                            aside                    
+                    article
+                         footer
+                         
+  HTML Computercode : <code> - 프로그래밍 코드짜는 것처럼 나온다
+                      <kbd> - keyboard input을 쓰고 싶을 떄 사용
+                      <samp> - computer output 보여 주고 싶을 때 사용
+                      <var> - 변수
+                      <pre> - 형식화된 텍스트
+  HTML Symbols : https://www.w3schools.com/html/html_symbols.asp 들어가서 보면 될듯
+  HTML Emojis : 이미지는 아닌데 이모티콘 같은 친구들 https://www.w3schools.com/html/html_emojis.asp
   HTML
