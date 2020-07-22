@@ -97,7 +97,7 @@ HTML Forms
                                                 <input type="url" id="homepage" name="homepage">
                                                </form>
                       <input type="week"> - 주가 뜨는데 년단위에서 나오는 주 단위라 그렇게 친절하지는 않음
-**HTML Input Attributes - input에 들어가는 설정들. 되게 재미있음. <input type="" ~~>
+**HTML Input Attributes : input에 들어가는 설정들. 되게 재미있음. <input type="" ~~>
                           readonly - 읽을수만 가능 ex) <input type="text" id="fname" value="John" readonly>
                           disabled - 선택이나 그런거 못함 ex) <input type="text" id="fname" name="fname" value="John" diabled>
                           size - input 창의 크기. 기본값은 20 ex)<input type="text" id="fname" name="fname" value="John" size="50">
@@ -128,13 +128,105 @@ HTML Forms
                                                     <option value="Opera">
                                                     <option value="Safari">
                                                  </datalist>
-  HTML Input Form Attributes
+  HTML Input Form Attributes : formaction, formmethod, formtarget, formnovalidate, novalidate --> 잘 모르겠음.
 HTML Graphics
-  HTML Canvas
-  HTML SVG
+  HTML Canvas : Canvas 열어놓고 그위에 그림 그리기. var c = document.getElementById("myCanvas"); var ctx = c.getContext("2d"); --> default
+                Draw a Line - ctx.moveTo(0, 0); ctx.lineTo(200, 100); ctx.stroke();
+                Draw a Circle = ctx.beginPath(); ctx.arc(95, 50, 40, 0, 2 * Math.PI); ctx.stroke();
+                Draw a Text - ctx.font = "30px Arial"; ctx.fillText("Hello World", 10, 50);
+                stroke Text - ctx.font = "30px Arial"; ctx.strokeText("Hello World", 10, 50);
+                Draw Linear Gradient - ex) // Create gradient
+                                            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                                            grd.addColorStop(0, "red");
+                                            grd.addColorStop(1, "white");
+
+                                            // Fill with gradient
+                                            ctx.fillStyle = grd;
+                                            ctx.fillRect(10, 10, 150, 80);
+                Draw Circular Gradient - ex) // Create gradient
+                                              var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                                              grd.addColorStop(0, "red");
+                                              grd.addColorStop(1, "white");
+
+                                              // Fill with gradient
+                                              ctx.fillStyle = grd;
+                                              ctx.fillRect(10, 10, 150, 80);
+  HTML SVG - SVG defines vector-based graphics in XML format
+             Scalable Vector Graphics
+             ex)
+                <!DOCTYPE html>
+                <html>
+                <body>
+                  //circle
+                  <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                  </svg>
+                  //rect
+                  <svg width="400" height="100">
+                    <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+                  </svg>
+                  //rounded rect
+                  <svg width="400" height="180">
+                    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                  </svg>
+                  //star
+                  <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198"
+                    style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                  </svg>
+                </body>
+                </html>
 HTML Media
-  HTML Media
-  HTML Video
-  HTML Audio
-  HTML Plug-ins
-  HTML YouTube
+  HTML Video -  <!DOCTYPE html> 
+                <html> 
+                <body> 
+
+                <div style="text-align:center"> 
+                  <button onclick="playPause()">Play/Pause</button> 
+                  <button onclick="makeBig()">Big</button>
+                  <button onclick="makeSmall()">Small</button>
+                  <button onclick="makeNormal()">Normal</button>
+                  <br><br>
+                  <video id="video1" width="420">
+                    <source src="mov_bbb.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                  </video>
+                </div> 
+
+                <script> 
+                var myVideo = document.getElementById("video1"); 
+
+                function playPause() { 
+                  if (myVideo.paused) 
+                    myVideo.play(); 
+                  else 
+                    myVideo.pause(); 
+                } 
+
+                function makeBig() { 
+                    myVideo.width += 100; 
+                } 
+
+                function makeSmall() { 
+                    myVideo.width -= 100; 
+                } 
+
+                function makeNormal() { 
+                    myVideo.width = 420; 
+                } 
+                </script> 
+
+                <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+                </body> 
+                </html>
+  HTML Audio - 예전에 블로그 같은데 올리던 식이 이런 방식인가봄
+               ex) <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+  HTML Plug-ins - <object width="100%" height="500px" data="snippet.html"></object>
+  HTML YouTube - iframe으로 웹안에 여는 방식을 이용함. ex) <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
