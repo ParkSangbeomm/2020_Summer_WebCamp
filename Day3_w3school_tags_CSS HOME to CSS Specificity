@@ -1,0 +1,111 @@
+/*코멘트 처리는 다음과 같이*/
+
+CSS Selectors : id = #
+                class = .
+                모든것 몽땅 -> *{}
+                h1,h2,p가 같으면 -> h1,h2,p{}
+                
+How To Add CSS : 1) External - 외부의 css 파일을 link로 가져오기 ex) <link rel="stylesheet" type="text/css" href="mystyle.css">
+                 2) Internal - head 밑의 style에다가 넣기 body{} , h1{} ...
+                 3) Inline - 그 위치에서 직접 style 넣고 하기 ex) <h1 style="color:blue;">
+                 
+CSS color Names : 일단 이쁘고 많음. background-color, color, border같은 곳에 넣을 수 있으며
+                  rgb(255,99,71), #ffffff, hsl(9,100%, 64%)와 같이 표현가능
+                  rgb의 경우 (red, green, blue)이며 rgba면 뒤에가 opacity값인거 같음.
+                  HEX의 경우 #ffffff(rr,gg,bb)
+                  hsl의 경우 hsl(hue, saturation, lightness)
+                  
+CSS background image : body {  background-image: url("paper.gif"); } 이렇게하면 배경으로 깔림
+               repeat : background-repeat: repeat-x; repeat-y; no-repeat; 반복 잡기
+               background-position : right top; 오른쪽위에 생김 no repeat와 함께라면 하나만 ㅇㅇ
+               background-attachment : fixed; 이러면 스크롤내려도 계속 붙어있음
+                                       scroll; 이러면 내리면 사라짐.
+                                       ex) body {
+                                              background-image: url("img_tree.png");
+                                              background-repeat: no-repeat;
+                                              background-position: right top;
+                                              background-attachment: fixed;
+                                            }
+                이렇게 한줄에 가능 :body {  background: #ffffff url("img_tree.png") no-repeat right top; }
+ 
+ CSS Borders : 종류 - dotted - Defines a dotted border
+                      dashed - Defines a dashed border
+                      solid - Defines a solid border
+                      double - Defines a double border
+                      groove - Defines a 3D grooved border. The effect depends on the border-color value
+                      ridge - Defines a 3D ridged border. The effect depends on the border-color value
+                      inset - Defines a 3D inset border. The effect depends on the border-color value
+                      outset - Defines a 3D outset border. The effect depends on the border-color value
+                      none - Defines no border
+                      hidden - Defines a hidden border
+                width - border-width : thick; or border-width : 2px; 두개 인자면 top bottom & sides 4개 인잠면 top right bottom left
+                border-radius 주면 모서리 둥글어짐
+ 
+ CSS Box Model : content 중심으로 봤을 때 Margin - Border - padding - content 순서로 되어있다.
+ 
+ CSSs Outline : border바깥으로 outline이라는게 있다. 스타일의 경우 다음과 같다.
+                  dotted - Defines a dotted outline
+                  dashed - Defines a dashed outline
+                  solid - Defines a solid outline
+                  double - Defines a double outline
+                  groove - Defines a 3D grooved outline
+                  ridge - Defines a 3D ridged outline
+                  inset - Defines a 3D inset outline
+                  outset - Defines a 3D outset outline
+                  none - Defines no outline
+                  hidden - Defines a hidden outline
+                  
+                  outline 요소들로는 p.ex1 {
+                                      border: 1px solid black;
+                                      outline-style: solid;
+                                      outline-color: red;
+                                      outline-width: thin;
+                                    }
+  CSS TextAlignment : vertical-align사용하면 이미지의 클래스로 사용할 때 글이 그림의 어느위치에 붙는지를 알려준다.
+  CSS Text Decoration : text-decoration에는 overline, line-through, underline 세가지가 있다.
+           Transformation : text-transformation에는 uppercase, lowercase, capitalize가 있다.
+           Spacing : text-indent, letter-spacing, line-height, word-spacing, white-space
+           shadowing : text-shadow : 2px 2px red;
+           
+  Font Google - <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+                <style>
+                body {
+                  font-family: "Sofia";
+                  font-size: 22px;
+                }
+                </style>
+                요렇게쓰면 google font를 이용할 수가 있다. 이쁜 폰트가 많으니 잘 사용하면 좋을듯하다.
+  
+ CSS Icons : <script src="https://kit.fontawesome.com/a076d05399.js"></script> 요렇게 쓰면 fontawesome의 아이콘들을 사용할 수 가ㅆ다.
+ 
+ CSS Links :  a:link - a normal, unvisited link
+              a:visited - a link the user has visited
+              a:hover - a link when the user mouses over it
+              a:active - a link the moment it is clicked
+ 
+ CSS Lists : list-stye-type 으로 주석모양 바꿀 수 있음. list-style-image로 원하는 모양을 넣을수돋 있음.
+             padding margin background로 꾸밀수도 있음.
+ 
+ CSS Table Properties : table로 th td tr로 설정 가능. 
+                        border	Sets all the border properties in one declaration
+                        border-collapse	Specifies whether or not table borders should be collapsed
+                        border-spacing	Specifies the distance between the borders of adjacent cells
+                        caption-side	Specifies the placement of a table caption
+                        empty-cells	Specifies whether or not to display borders and background on empty cells in a table
+                        table-layout	Sets the layout algorithm to be used for a table
+
+ CSS Layout : Block level elements : div, h#, p, form, header, footer, section
+              inline level elements : span, a, img
+              style로 display:block, display:inline; 하면 바꿀 수 있음.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
