@@ -37,3 +37,24 @@ CSS Multiple Columns : 신문처럼 긴 글을 알아서 길이에 따라서 잘
                        
 CSS User Interface : resize : vertical, both;와 같은 방식으로 크기를 유저가 임의로 바꿀 수 있음.
 
+CSS Box Sizing : box-sizing	Defines how the width and height of an element are calculated: should they include padding and borders, or not
+
+CSS MQ Examples : size에 따라서 색이 달라짐
+/* Set the background color of body to tan */
+body {
+  background-color: tan;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
