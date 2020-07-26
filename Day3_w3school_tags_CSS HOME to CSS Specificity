@@ -149,5 +149,166 @@ CSS background image : body {  background-image: url("paper.gif"); } 이렇게�
               ::first-line	p::first-line	Selects the first line of every <p> element
               ::selection	p::selection	Selects the portion of an element that is selected by a user
  
+ CSS Dropdown+Navbar : example
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+</body>
+</html>
+
+CSS image gallery : example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
+</html>
+
+CSS Attr Selectors: [attribute]	[target]	Selects all elements with a target attribute
+                    [attribute=value]	[target=_blank]	Selects all elements with target="_blank"
+                    [attribute~=value]	[title~=flower]	Selects all elements with a title attribute containing the word "flower"
+                    [attribute|=value]	[lang|=en]	Selects all elements with a lang attribute value starting with "en"
+                    [attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+                    [attribute$=value]	a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
+                    [attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+
+CSS Forms : ***************
+
+CSS Counters : 이렇게하면 자동으로 숫자 붙어서 순서가 잡힘.
+                  ol {
+                    counter-reset: section;
+                    list-style-type: none;
+                  }
+
+                  li::before {
+                    counter-increment: section;
+                    content: counters(section,".") " ";
+                  }
+                  
+ CSS Website Layout : 이거보고 참고하면 될듯
  
  
