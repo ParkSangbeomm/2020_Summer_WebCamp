@@ -98,9 +98,9 @@ CSS background image : body {  background-image: url("paper.gif"); } 이렇게�
               inline level elements : span, a, img
               style로 display:block, display:inline; 하면 바꿀 수 있음.
  
- 
- 
- 
+ CSS Layout position : property - static, relative, fixed, absolute, sticky
+            overflow : visible, hidden, scroll, suto(scroll과 비슷하지만 스크롤바가 필요할때만 추가됨)
+            float : left, right, none,inherit ex)img{float:right;} 이러면 사진이 글 오른쪽에 옴.
  
  
  
