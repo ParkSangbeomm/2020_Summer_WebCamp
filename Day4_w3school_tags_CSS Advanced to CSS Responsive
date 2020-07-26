@@ -58,3 +58,8 @@ body {
     background-color: olive;
   }
 }
+
+CSS Responsive : viewport의 경우 핸드폰과 pc 두 경우를 모두 생각하는 이야기였으며
+                 grid의 경우 많은 페이지들이 column을 기준으로 나누어져 있다는 이야기였다.
+                 image와 video의 경우 삽입하는 방법을 설명했으며
+                 Framework의 경우 bootstrap과 같은 다른 곳에서 이용할 수 있는 내용을 다룬다.
