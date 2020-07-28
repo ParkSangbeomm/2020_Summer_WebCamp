@@ -12,3 +12,13 @@ JS Output : 1) innerHTML - document.getElementById("demo").innerHTML = 5+5; id�
             5) window.print() - 인쇄 <button onclick="window.print()">Print this page</button>
             
 JS String Methods : 1) a.lentgh; 길이
+                    2) Breaking Long Code Lines : \ , +
+                    3) Finding a String in a String ex) indexOf() - var str = "Please locate where 'locate' occurs!";
+                                                                    var pos = str.indexOf("locate");
+                                                        lastIndexOf() - 가장 마지막에 나온 내용
+                    4) Searching for a String in a String - search()
+                    5) The slice() Method - slice(0,5)
+                    6) The substring() Method - substring(0,5)
+                    7) Replacing String Content - replace()
+JS Array : var cars = [];
+           var cars = new Array("a","b");
