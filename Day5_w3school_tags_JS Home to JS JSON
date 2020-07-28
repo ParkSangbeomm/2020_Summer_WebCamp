@@ -11,6 +11,13 @@ JS Output : 1) innerHTML - document.getElementById("demo").innerHTML = 5+5; id�
             4) console.log() - F12 눌렀을 때 console에 찍혀 나옴 <script>console.log(5+5);</script>
             5) window.print() - 인쇄 <button onclick="window.print()">Print this page</button>
             
+JS Object example : var person = {
+                      firstName: "John",
+                      lastName: "Doe",
+                      age: 50,
+                      eyeColor: "blue"
+                    };
+                    
 JS String Methods : 1) a.lentgh; 길이
                     2) Breaking Long Code Lines : \ , +
                     3) Finding a String in a String ex) indexOf() - var str = "Please locate where 'locate' occurs!";
@@ -20,5 +27,17 @@ JS String Methods : 1) a.lentgh; 길이
                     5) The slice() Method - slice(0,5)
                     6) The substring() Method - substring(0,5)
                     7) Replacing String Content - replace()
+                    8) Converting to Upper and Lower Case - var t=t1.toUpperCase(); toLowerCase();
+                    9) join two or more strings - var t1=t.concat(" ", "HI");
+                    10) removes whitespace from both sides of a string - str.trim() == str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '')
 JS Array : var cars = [];
            var cars = new Array("a","b");
+
+JS strict Mode : 보안을 위해서 strict mode 를 이용하기도 한다. "use strict";라고 추가하면 변수 따로 선언하지 않은 녀석들은 오류나고 그런다.
+
+JS Let : 변수 중 Tuple 성격을 가진 녀석. 마음대로 안에 내용을 바꿀 수 없음.
+
+JS JSON : JavaScript Object Notation
+          lightweight data interchange format
+          language independent *
+          "self-describing" and easy to understand
