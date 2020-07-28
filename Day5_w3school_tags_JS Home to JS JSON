@@ -1,0 +1,14 @@
+JS Introduction : JavaScript Can Change HTML Content and CSS Contents. 
+                  ex) document.getElementById("demo").style.display= "blcok"; (or "none")
+                  
+JS Where To : 1) Inserted between <script></script> 어디든 상관없음(body, head)
+                 그안에서 function 형태로 있을 수 있음.
+              2) External JavaScript Advantages <script scr="myScript1.js"></script>, <script src="https://www.w3schools.com/js/myScript1.js"></script>
+              
+JS Output : 1) innerHTML - document.getElementById("demo").innerHTML = 5+5; id안에 내용에다가 쓰는것임
+         ***2) document.write() - <script>document.write(5+5);</script> 그냥 출력하는건데 이게 button 클릭했을때 실행, 이런걸로 하면 모든 HTML내용을 없애고 이 친구만 나옴
+            3) window.alert() - 알림창으로 나옴
+            4) console.log() - F12 눌렀을 때 console에 찍혀 나옴 <script>console.log(5+5);</script>
+            5) window.print() - 인쇄 <button onclick="window.print()">Print this page</button>
+            
+JS String Methods : 1) a.lentgh; 길이
