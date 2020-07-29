@@ -1,0 +1,69 @@
+JS Forms : document.forms[][].value 형식으로 form 중에서 찾아서 function 을 돌릴수가 있음.
+           form 에서 onsubmit="return functionname" 을 이용하면 function의 값에 따라서 true false를 보낼 수 있음.
+           제대로 된 값인지 확인을 위해서 숫자를 입력받아야하는데 숫자가 아닐경우 isNaN(var something)이 사용될 수 있음.
+            disabled :	Specifies that the input element should be disabled
+            max :	Specifies the maximum value of an input element
+            min :	Specifies the minimum value of an input element
+            pattern :	Specifies the value pattern of an input element
+            required :	Specifies that the input field requires an element
+            type : 	Specifies the type of an input element
+           
+ JS Forms API : checkValidity() - input이 타당하면 참값을 return 함.
+                                  Constraint Validation DOM Properties
+                                    validity :	Contains boolean properties related to the validity of an input element.
+                                    validationMessage :	Contains the message a browser will display when the validity is false.
+                                    willValidate :	Indicates if an input element will be validated.
+                                  Validity Properties
+                                    customError :	Set to true, if a custom validity message is set.
+                                    patternMismatch :	Set to true, if an element's value does not match its pattern attribute.
+                                    rangeOverflow :	Set to true, if an element's value is greater than its max attribute.
+                                    rangeUnderflow :	Set to true, if an element's value is less than its min attribute.
+                                    stepMismatch :	Set to true, if an element's value is invalid per its step attribute.
+                                    tooLong :	Set to true, if an element's value exceeds its maxLength attribute.
+                                    typeMismatch :	Set to true, if an element's value is invalid per its type attribute.
+                                    valueMissing :	Set to true, if an element (with a required attribute) has no value.
+                                    valid :	Set to true, if an element's value is valid.
+                setCustomVlidity() - input에 대해 메시지를 세팅할 수 있음. 근데 안써볼거임ㅇㅇ
+                
+ JS DOM Document : Finding HTML Elements
+                    Method                        Description
+                    document.getElementById(id)	: Find an element by element id
+                    document.getElementsByTagName(name) :	Find elements by tag name
+                    document.getElementsByClassName(name) :	Find elements by class name
+                   element.innerHTML - HTML 을 바꿈
+                   element.attribute - attribute value 를 바꿈
+                   element.style.property - style 안에 내용도 바꿀 수 있나봄
+                   
+ JS Elements : Finding HTML Element by Id - var myElement = document.getElementById("intro");
+               Finding HTML Elements by Tag Name - var x = document.getElementsByTagName("p");
+               Finding HTML Elements by Class Name - var x = document.getElementsByClassName("intro");
+               Finding HTML Elements by CSS Selectors - var x = document.querySelectorAll("p.intro");
+               Finding HTML Elements by HTML Object Collections - var x = document.forms["frm1"];
+                                                                  var text = "";
+                                                                  var i;
+                                                                  for (i = 0; i < x.length; i++) {
+                                                                    text += x.elements[i].value + "<br>";
+                                                                  }
+                                                                  document.getElementById("demo").innerHTML = text;
+                                                                  
+ DOM Event Listener : document.getElementById("myBtn").addEventListener("click", displayDate); 이런식으로 클릭, mouseover, mouseout 이런거
+                      다 사용가능함
+ 
+ Dom Nodes : 밑에 예제처럼 create 도 가능하고 insertBbefore하면 전에 넣을 수도 있다. .remove()하면 없앨수도 있다.
+<div id="div1">
+  <p id="p1">This is a paragraph.</p>
+  <p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+var child = document.getElementById("p1");
+element.insertBefore(para, child);
+</script>
+ 
+ DOM Node Lists : var myNodeList = document.querySelectorAll("p"); 이렇게 묶은 다음에  y = myNodeList[1]; 이렇게하면 두번째 p 값 가져옴
+                  myNodeList.length 하면 길이를 가져옴
