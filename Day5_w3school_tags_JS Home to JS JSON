@@ -1,0 +1,43 @@
+JS Introduction : JavaScript Can Change HTML Content and CSS Contents. 
+                  ex) document.getElementById("demo").style.display= "blcok"; (or "none")
+                  
+JS Where To : 1) Inserted between <script></script> 어디든 상관없음(body, head)
+                 그안에서 function 형태로 있을 수 있음.
+              2) External JavaScript Advantages <script scr="myScript1.js"></script>, <script src="https://www.w3schools.com/js/myScript1.js"></script>
+              
+JS Output : 1) innerHTML - document.getElementById("demo").innerHTML = 5+5; id안에 내용에다가 쓰는것임
+         ***2) document.write() - <script>document.write(5+5);</script> 그냥 출력하는건데 이게 button 클릭했을때 실행, 이런걸로 하면 모든 HTML내용을 없애고 이 친구만 나옴
+            3) window.alert() - 알림창으로 나옴
+            4) console.log() - F12 눌렀을 때 console에 찍혀 나옴 <script>console.log(5+5);</script>
+            5) window.print() - 인쇄 <button onclick="window.print()">Print this page</button>
+            
+JS Object example : var person = {
+                      firstName: "John",
+                      lastName: "Doe",
+                      age: 50,
+                      eyeColor: "blue"
+                    };
+                    
+JS String Methods : 1) a.lentgh; 길이
+                    2) Breaking Long Code Lines : \ , +
+                    3) Finding a String in a String ex) indexOf() - var str = "Please locate where 'locate' occurs!";
+                                                                    var pos = str.indexOf("locate");
+                                                        lastIndexOf() - 가장 마지막에 나온 내용
+                    4) Searching for a String in a String - search()
+                    5) The slice() Method - slice(0,5)
+                    6) The substring() Method - substring(0,5)
+                    7) Replacing String Content - replace()
+                    8) Converting to Upper and Lower Case - var t=t1.toUpperCase(); toLowerCase();
+                    9) join two or more strings - var t1=t.concat(" ", "HI");
+                    10) removes whitespace from both sides of a string - str.trim() == str.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '')
+JS Array : var cars = [];
+           var cars = new Array("a","b");
+
+JS strict Mode : 보안을 위해서 strict mode 를 이용하기도 한다. "use strict";라고 추가하면 변수 따로 선언하지 않은 녀석들은 오류나고 그런다.
+
+JS Let : 변수 중 Tuple 성격을 가진 녀석. 마음대로 안에 내용을 바꿀 수 없음.
+
+JS JSON : JavaScript Object Notation
+          lightweight data interchange format
+          language independent *
+          "self-describing" and easy to understand

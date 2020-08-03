@@ -1,0 +1,314 @@
+/*코멘트 처리는 다음과 같이*/
+
+CSS Selectors : id = #
+                class = .
+                모든것 몽땅 -> *{}
+                h1,h2,p가 같으면 -> h1,h2,p{}
+                
+How To Add CSS : 1) External - 외부의 css 파일을 link로 가져오기 ex) <link rel="stylesheet" type="text/css" href="mystyle.css">
+                 2) Internal - head 밑의 style에다가 넣기 body{} , h1{} ...
+                 3) Inline - 그 위치에서 직접 style 넣고 하기 ex) <h1 style="color:blue;">
+                 
+CSS color Names : 일단 이쁘고 많음. background-color, color, border같은 곳에 넣을 수 있으며
+                  rgb(255,99,71), #ffffff, hsl(9,100%, 64%)와 같이 표현가능
+                  rgb의 경우 (red, green, blue)이며 rgba면 뒤에가 opacity값인거 같음.
+                  HEX의 경우 #ffffff(rr,gg,bb)
+                  hsl의 경우 hsl(hue, saturation, lightness)
+                  
+CSS background image : body {  background-image: url("paper.gif"); } 이렇게하면 배경으로 깔림
+               repeat : background-repeat: repeat-x; repeat-y; no-repeat; 반복 잡기
+               background-position : right top; 오른쪽위에 생김 no repeat와 함께라면 하나만 ㅇㅇ
+               background-attachment : fixed; 이러면 스크롤내려도 계속 붙어있음
+                                       scroll; 이러면 내리면 사라짐.
+                                       ex) body {
+                                              background-image: url("img_tree.png");
+                                              background-repeat: no-repeat;
+                                              background-position: right top;
+                                              background-attachment: fixed;
+                                            }
+                이렇게 한줄에 가능 :body {  background: #ffffff url("img_tree.png") no-repeat right top; }
+ 
+ CSS Borders : 종류 - dotted - Defines a dotted border
+                      dashed - Defines a dashed border
+                      solid - Defines a solid border
+                      double - Defines a double border
+                      groove - Defines a 3D grooved border. The effect depends on the border-color value
+                      ridge - Defines a 3D ridged border. The effect depends on the border-color value
+                      inset - Defines a 3D inset border. The effect depends on the border-color value
+                      outset - Defines a 3D outset border. The effect depends on the border-color value
+                      none - Defines no border
+                      hidden - Defines a hidden border
+                width - border-width : thick; or border-width : 2px; 두개 인자면 top bottom & sides 4개 인잠면 top right bottom left
+                border-radius 주면 모서리 둥글어짐
+ 
+ CSS Box Model : content 중심으로 봤을 때 Margin - Border - padding - content 순서로 되어있다.
+ 
+ CSSs Outline : border바깥으로 outline이라는게 있다. 스타일의 경우 다음과 같다.
+                  dotted - Defines a dotted outline
+                  dashed - Defines a dashed outline
+                  solid - Defines a solid outline
+                  double - Defines a double outline
+                  groove - Defines a 3D grooved outline
+                  ridge - Defines a 3D ridged outline
+                  inset - Defines a 3D inset outline
+                  outset - Defines a 3D outset outline
+                  none - Defines no outline
+                  hidden - Defines a hidden outline
+                  
+                  outline 요소들로는 p.ex1 {
+                                      border: 1px solid black;
+                                      outline-style: solid;
+                                      outline-color: red;
+                                      outline-width: thin;
+                                    }
+  CSS TextAlignment : vertical-align사용하면 이미지의 클래스로 사용할 때 글이 그림의 어느위치에 붙는지를 알려준다.
+  CSS Text Decoration : text-decoration에는 overline, line-through, underline 세가지가 있다.
+           Transformation : text-transformation에는 uppercase, lowercase, capitalize가 있다.
+           Spacing : text-indent, letter-spacing, line-height, word-spacing, white-space
+           shadowing : text-shadow : 2px 2px red;
+           
+  Font Google - <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+                <style>
+                body {
+                  font-family: "Sofia";
+                  font-size: 22px;
+                }
+                </style>
+                요렇게쓰면 google font를 이용할 수가 있다. 이쁜 폰트가 많으니 잘 사용하면 좋을듯하다.
+  
+ CSS Icons : <script src="https://kit.fontawesome.com/a076d05399.js"></script> 요렇게 쓰면 fontawesome의 아이콘들을 사용할 수 가ㅆ다.
+ 
+ CSS Links :  a:link - a normal, unvisited link
+              a:visited - a link the user has visited
+              a:hover - a link when the user mouses over it
+              a:active - a link the moment it is clicked
+ 
+ CSS Lists : list-stye-type 으로 주석모양 바꿀 수 있음. list-style-image로 원하는 모양을 넣을수돋 있음.
+             padding margin background로 꾸밀수도 있음.
+ 
+ CSS Table Properties : table로 th td tr로 설정 가능. 
+                        border	Sets all the border properties in one declaration
+                        border-collapse	Specifies whether or not table borders should be collapsed
+                        border-spacing	Specifies the distance between the borders of adjacent cells
+                        caption-side	Specifies the placement of a table caption
+                        empty-cells	Specifies whether or not to display borders and background on empty cells in a table
+                        table-layout	Sets the layout algorithm to be used for a table
+
+ CSS Layout : Block level elements : div, h#, p, form, header, footer, section
+              inline level elements : span, a, img
+              style로 display:block, display:inline; 하면 바꿀 수 있음.
+ 
+ CSS Layout position : property - static, relative, fixed, absolute, sticky
+            overflow : visible, hidden, scroll, suto(scroll과 비슷하지만 스크롤바가 필요할때만 추가됨)
+            float : left, right, none,inherit ex)img{float:right;} 이러면 사진이 글 오른쪽에 옴.
+ 
+ CSS Combinators :  element element	div p	Selects all <p> elements inside <div> elements
+                    element>element	div > p	Selects all <p> elements where the parent is a <div> element
+                    element+element	div + p	Selects all <p> elements that are placed immediately after <div> elements
+                    element1~element2	p ~ ul	Selects every <ul> element that are preceded by a <p> element
+ 
+ CSS Pseudo - classes
+               Selector	Example	Example description
+              :active	a:active	Selects the active link
+              :checked	input:checked	Selects every checked <input> element
+              :disabled	input:disabled	Selects every disabled <input> element
+              :empty	p:empty	Selects every <p> element that has no children
+              :enabled	input:enabled	Selects every enabled <input> element
+              :first-child	p:first-child	Selects every <p> elements that is the first child of its parent
+              :first-of-type	p:first-of-type	Selects every <p> element that is the first <p> element of its parent
+              :focus	input:focus	Selects the <input> element that has focus
+              :hover	a:hover	Selects links on mouse over
+              :in-range	input:in-range	Selects <input> elements with a value within a specified range
+              :invalid	input:invalid	Selects all <input> elements with an invalid value
+              :lang(language)	p:lang(it)	Selects every <p> element with a lang attribute value starting with "it"
+              :last-child	p:last-child	Selects every <p> elements that is the last child of its parent
+              :last-of-type	p:last-of-type	Selects every <p> element that is the last <p> element of its parent
+              :link	a:link	Selects all unvisited links
+              :not(selector)	:not(p)	Selects every element that is not a <p> element
+              :nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
+              :nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+              :nth-last-of-type(n)	p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+              :nth-of-type(n)	p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
+              :only-of-type	p:only-of-type	Selects every <p> element that is the only <p> element of its parent
+              :only-child	p:only-child	Selects every <p> element that is the only child of its parent
+              :optional	input:optional	Selects <input> elements with no "required" attribute
+              :out-of-range	input:out-of-range	Selects <input> elements with a value outside a specified range
+              :read-only	input:read-only	Selects <input> elements with a "readonly" attribute specified
+              :read-write	input:read-write	Selects <input> elements with no "readonly" attribute
+              :required	input:required	Selects <input> elements with a "required" attribute specified
+              :root	root	Selects the document's root element
+              :target	#news:target	Selects the current active #news element (clicked on a URL containing that anchor name)
+              :valid	input:valid	Selects all <input> elements with a valid value
+              :visited	a:visited	Selects all visited links
+
+
+              Selector	Example	Example description
+              ::after	p::after	Insert content after every <p> element
+              ::before	p::before	Insert content before every <p> element
+              ::first-letter	p::first-letter	Selects the first letter of every <p> element
+              ::first-line	p::first-line	Selects the first line of every <p> element
+              ::selection	p::selection	Selects the portion of an element that is selected by a user
+ 
+ CSS Dropdown+Navbar : example
+ 
+ <!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
+
+<h3>Dropdown Menu inside a Navigation Bar</h3>
+<p>Hover over the "Dropdown" link to see the dropdown menu.</p>
+
+</body>
+</html>
+
+CSS image gallery : example
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+</body>
+</html>
+
+CSS Attr Selectors: [attribute]	[target]	Selects all elements with a target attribute
+                    [attribute=value]	[target=_blank]	Selects all elements with target="_blank"
+                    [attribute~=value]	[title~=flower]	Selects all elements with a title attribute containing the word "flower"
+                    [attribute|=value]	[lang|=en]	Selects all elements with a lang attribute value starting with "en"
+                    [attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+                    [attribute$=value]	a[href$=".pdf"]	Selects every <a> element whose href attribute value ends with ".pdf"
+                    [attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+
+CSS Forms : ***************
+
+CSS Counters : 이렇게하면 자동으로 숫자 붙어서 순서가 잡힘.
+                  ol {
+                    counter-reset: section;
+                    list-style-type: none;
+                  }
+
+                  li::before {
+                    counter-increment: section;
+                    content: counters(section,".") " ";
+                  }
+                  
+ CSS Website Layout : 이거보고 참고하면 될듯
+ 
+ 

@@ -1,0 +1,232 @@
+HTML Forms
+  HTML Forms : <form> - form 태그는 웹 페이지에서의 입력 양식을 의미함
+               <input> - type 은 text, radio, submit 이 있다. 
+                         text - single-line text input field
+                         radio - for selecting one of many choices
+                         submit - for submitting the form
+               <label> - label은 폼의 양식에 이름 붙이는 태그입니다
+               action - <form action="/action_page.php"> 실행시키면 php파일 실행됨
+               
+  HTML Form Elements : <input> - 입력받는 부분
+                       <select> - drop-down list
+                       <textarea> -말 그대로 텍스트 넣는 부분
+                                  ex) <textarea name="message" row="10" cols="30"> Texting area </textarea>
+                       <button> - 말 그대로 클릭할 수 있는 버튼
+                                  ex) <button type="button" onclick="alert('Hello World!')
+                       <fieldset>, <legend> - fieldset은 한 그룹으로 묶는 것이고 legend의 경우 그 fieldset의 캡션이다
+                       <datalist> - 칸 클릭하면 밑으로 주루룩 뜨는거
+                                  ex) <form action="/action_page.php">
+                                      <input list="browsers">
+                                      <datalist id="browsers">
+                                        <option value="Internet Explorer">
+                                        <option value="Firefox">
+                                        <option value="Chrome">
+                                        <option value="Opera">
+                                        <option value="Safari">
+                                      </datalist>
+                                    </form>
+          *******      <output> - 이건 좀 재밌다
+                                  ex)  <form action="/action_page.php"
+                                        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                                        0
+                                        <input type="range"  id="a" name="a" value="50">
+                                        100 +
+                                        <input type="number" id="b" name="b" value="50">
+                                        =
+                                        <output name="x" for="a b"></output>
+                                        <br><br>
+                                        <input type="submit">
+                                      </form>
+                                      
+  HTML Input Types :  <input type="button"> - 클릭할 수 있는 박스
+                      <input type="checkbox"> - 네모 체크박스
+                      <input type="color"> - 색을 고를 수 있음
+                                              ex) <form action="/action_page.php">
+                                                    <label for="favcolor">Select your favorite color:</label>
+                                                    <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+                                                    <input type="submit" value="Submit">
+                                                  </form>
+                      <input type="date"> - 날짜 달력보여줌
+                                            ex) <form action="/action_page.php">
+                                                  <label for="birthday">Birthday:</label>
+                                                  <input type="date" id="birthday" name="birthday">
+                                                  <input type="submit" value="Submit">
+                                                </form>
+                      <input type="datetime-local"> - 이거도 달려인데 이게 더 간지
+                                                      ex) <form>
+                                                            <label for="birthdaytime">Birthday (date and time):</label>
+                                                            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                                                          </form>
+    *****             <input type="email"> - email 넣는곳인가봐
+                      <input type="file"> - file 선택하게 창 뜨는 버튼이 이거네
+                      <input type="hidden">
+                      <input type="image">
+                      <input type="month"> - 날짜 입력인데 월 일만 있음
+                      <input type="number"> - 하나씩 늘릴 수 있게 버튼있는 그런 UI
+                                              ex) <form action="/action_page.php">
+                                                    <label for="quantity">Quantity (between 1 and 5):</label>
+                                                    <input type="number" id="quantity" name="quantity" min="1" max="5">
+                                                    <input type="submit" value="Submit">
+                                                  </form>
+                      <input type="password"> - 글자가 별(*)로 나옴
+                      <input type="radio"> - 동그라미 체크할 수 있는 부분
+                      <input type="range"> - 범위 선택할 수 있는 것. 색 선택할 때도 사용함(color)
+                                             ex)<form>
+                                                  <label for="vol">Volume (between 0 and 50):</label>
+                                                  <input type="range" id="vol" name="vol" min="0" max="50">
+                                                </form>
+                      <input type="reset"> - 초기화시키는 부분
+                      <input type="search"> - 그냥 text field랑 비슷하게 행동함
+                      <input type="submit"> - 제출함
+      *****           <input type="tel"> - 핸드폰 번호 넣으라는 그런 창. 되게 자주 사용할듯
+                                           ex)<form action="/action_page.php">
+                                                <label for="phone">Enter a phone number:</label><br><br>
+                                                <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+                                                <small>Format: 123-45-678</small><br><br>
+                                                <input type="submit" value="Submit">
+                                              </form>   
+                      <input type="text"> - text를 쓸 수 있게 해줌
+                      <input type="time"> - 시간선택하는건데 날짜 선택하는거랑 같은 폼임
+                                            ex)<form>
+                                                <label for="appt">Select a time:</label>
+                                                <input type="time" id="appt" name="appt">
+                                               </form>
+                      <input type="url"> - url아니면 url치라고 뜸
+                                           ex) <form>
+                                                <label for="homepage">Add your homepage:</label>
+                                                <input type="url" id="homepage" name="homepage">
+                                               </form>
+                      <input type="week"> - 주가 뜨는데 년단위에서 나오는 주 단위라 그렇게 친절하지는 않음
+**HTML Input Attributes : input에 들어가는 설정들. 되게 재미있음. <input type="" ~~>
+                          readonly - 읽을수만 가능 ex) <input type="text" id="fname" value="John" readonly>
+                          disabled - 선택이나 그런거 못함 ex) <input type="text" id="fname" name="fname" value="John" diabled>
+                          size - input 창의 크기. 기본값은 20 ex)<input type="text" id="fname" name="fname" value="John" size="50">
+                          maxlength - 최대 입력받는 크기 ex)<input type="text" id="fname" name="fname" maxlengh="4" size="4">
+                          min, max - 이름에서 짐작가능함.
+                                     ex)<form>
+                                          <label for="datemax">Enter a date before 1980-01-01:</label>
+                                          <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+
+                                          <label for="datemin">Enter a date after 2000-01-01:</label>
+                                          <input type="date" id="datemin" name="datemin" min="2000-01-02"><br><br>
+
+                                          <label for="quantity">Quantity (between 1 and 5):</label>
+                                          <input type="number" id="quantity" name="quantity" min="1" max="5">
+                                        </form>
+                          multiple attribute - 파일 선택할 때 여러개 선택할 수 있게해줌. <input type="file" id="files" name="files" multiple>
+                          placeholder - 형식 맞춰서 입력할 수 있게 도와줌. 미리 보여주는 글자가 placeholder.일종의 예시 
+                                        ex) <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                          The required Attribute - 꼭 입력받아야함. ex) <input type="text" id="username" name="username" required>
+                          step Attribue - 파이썬 range 마지막 파라미터처럼 step을 정해줌 ex) <input type="number" id="points" name="points" step="3">
+                          height and width attribute - 위치 <input type="image" src="img_submit.gif" alt="Submit" width="48" height="48">
+                          list attribute - 아까 리스트 뜨는거 
+                                           ex)- <input list="browsers">
+                                                  <datalist id="browsers">
+                                                    <option value="Internet Explorer">
+                                                    <option value="Firefox">
+                                                    <option value="Chrome">
+                                                    <option value="Opera">
+                                                    <option value="Safari">
+                                                 </datalist>
+  HTML Input Form Attributes : formaction, formmethod, formtarget, formnovalidate, novalidate --> 잘 모르겠음.
+HTML Graphics
+  HTML Canvas : Canvas 열어놓고 그위에 그림 그리기. var c = document.getElementById("myCanvas"); var ctx = c.getContext("2d"); --> default
+                Draw a Line - ctx.moveTo(0, 0); ctx.lineTo(200, 100); ctx.stroke();
+                Draw a Circle = ctx.beginPath(); ctx.arc(95, 50, 40, 0, 2 * Math.PI); ctx.stroke();
+                Draw a Text - ctx.font = "30px Arial"; ctx.fillText("Hello World", 10, 50);
+                stroke Text - ctx.font = "30px Arial"; ctx.strokeText("Hello World", 10, 50);
+                Draw Linear Gradient - ex) // Create gradient
+                                            var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                                            grd.addColorStop(0, "red");
+                                            grd.addColorStop(1, "white");
+
+                                            // Fill with gradient
+                                            ctx.fillStyle = grd;
+                                            ctx.fillRect(10, 10, 150, 80);
+                Draw Circular Gradient - ex) // Create gradient
+                                              var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                                              grd.addColorStop(0, "red");
+                                              grd.addColorStop(1, "white");
+
+                                              // Fill with gradient
+                                              ctx.fillStyle = grd;
+                                              ctx.fillRect(10, 10, 150, 80);
+  HTML SVG - SVG defines vector-based graphics in XML format
+             Scalable Vector Graphics
+             ex)
+                <!DOCTYPE html>
+                <html>
+                <body>
+                  //circle
+                  <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                  </svg>
+                  //rect
+                  <svg width="400" height="100">
+                    <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+                  </svg>
+                  //rounded rect
+                  <svg width="400" height="180">
+                    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                  </svg>
+                  //star
+                  <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198"
+                    style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                  </svg>
+                </body>
+                </html>
+HTML Media
+  HTML Video -  <!DOCTYPE html> 
+                <html> 
+                <body> 
+
+                <div style="text-align:center"> 
+                  <button onclick="playPause()">Play/Pause</button> 
+                  <button onclick="makeBig()">Big</button>
+                  <button onclick="makeSmall()">Small</button>
+                  <button onclick="makeNormal()">Normal</button>
+                  <br><br>
+                  <video id="video1" width="420">
+                    <source src="mov_bbb.mp4" type="video/mp4">
+                    <source src="mov_bbb.ogg" type="video/ogg">
+                    Your browser does not support HTML video.
+                  </video>
+                </div> 
+
+                <script> 
+                var myVideo = document.getElementById("video1"); 
+
+                function playPause() { 
+                  if (myVideo.paused) 
+                    myVideo.play(); 
+                  else 
+                    myVideo.pause(); 
+                } 
+
+                function makeBig() { 
+                    myVideo.width += 100; 
+                } 
+
+                function makeSmall() { 
+                    myVideo.width -= 100; 
+                } 
+
+                function makeNormal() { 
+                    myVideo.width = 420; 
+                } 
+                </script> 
+
+                <p>Video courtesy of <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a>.</p>
+
+                </body> 
+                </html>
+  HTML Audio - 예전에 블로그 같은데 올리던 식이 이런 방식인가봄
+               ex) <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+  HTML Plug-ins - <object width="100%" height="500px" data="snippet.html"></object>
+  HTML YouTube - iframe으로 웹안에 여는 방식을 이용함. ex) <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>

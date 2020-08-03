@@ -1,0 +1,65 @@
+CSS Rounded Corners : border-radius를 4방면을 다 주면 각 모서리마다의 값을 줄 수 있음.
+
+CSS Border Images : border-image : url(border.png) 30% stretch; 이런식으로 변화를 줄 수 있음. 문양에다가 ㅇㅇ
+
+CSS Gradients : Linear, Radial 둘 다 있어서 그라데이션 쓰고 싶으면 들어가서 보면 될 듯
+
+CSS Shadows : Shadow Effects - h1{color:yellow; text-shadow: -1px 0 black, 0 1px black,  1px 0 black}
+                               이런식으로 여러가지 섞어서 사용도 가능
+              Box Shadow - box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2) 이런식으로 가능
+              
+CSS Text Effects :  text-align-last	Specifies how to align the last line of a text
+                    text-justify	Specifies how justified text should be aligned and spaced
+                    text-overflow	Specifies how overflowed content that is not displayed should be signaled to the user
+                    word-break	Specifies line breaking rules for non-CJK scripts
+                    word-wrap	Allows long words to be able to be broken and wrap onto the next line
+                    writing-mode	Specifies whether lines of text are laid out horizontally or vertically
+                    
+CSS Transitions : transition :width 2s; 넓어지는거 2초 div:hover{width:300px;} 100->300으로 2초동안 
+
+CSS Animations, CSS Tooltips, CSS Style Images, CSS object-fit 은 필요할 떄 보면 될 거 같음
+
+CSS Buttons : button id="#" 이렇게 커스터마이징 가능
+
+CSS Pagination : Page 옮기는거 밑에 숫자 그거임
+
+CSS Multiple Columns : 신문처럼 긴 글을 알아서 길이에 따라서 잘라줌
+                        column-count	Specifies the number of columns an element should be divided into
+                        column-fill	Specifies how to fill columns
+                        column-gap	Specifies the gap between the columns
+                        column-rule	A shorthand property for setting all the column-rule-* properties
+                        column-rule-color	Specifies the color of the rule between columns
+                        column-rule-style	Specifies the style of the rule between columns
+                        column-rule-width	Specifies the width of the rule between columns
+                        column-span	Specifies how many columns an element should span across
+                        column-width	Specifies a suggested, optimal width for the columns
+                        columns	A shorthand property for setting column-width and column-count
+                       
+CSS User Interface : resize : vertical, both;와 같은 방식으로 크기를 유저가 임의로 바꿀 수 있음.
+
+CSS Box Sizing : box-sizing	Defines how the width and height of an element are calculated: should they include padding and borders, or not
+
+CSS MQ Examples : size에 따라서 색이 달라짐
+/* Set the background color of body to tan */
+body {
+  background-color: tan;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+
+CSS Responsive : viewport의 경우 핸드폰과 pc 두 경우를 모두 생각하는 이야기였으며
+                 grid의 경우 많은 페이지들이 column을 기준으로 나누어져 있다는 이야기였다.
+                 image와 video의 경우 삽입하는 방법을 설명했으며
+                 Framework의 경우 bootstrap과 같은 다른 곳에서 이용할 수 있는 내용을 다룬다.
