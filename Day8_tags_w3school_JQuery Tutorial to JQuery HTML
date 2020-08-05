@@ -1,0 +1,3 @@
+jQuery HOME : <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+              jQuery = write less, do more
+              Basic syntax = $(selector).action()
