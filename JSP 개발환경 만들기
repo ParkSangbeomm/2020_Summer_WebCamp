@@ -1,0 +1,35 @@
+1. JDK 8 이상으로 설치 - https://www.oracle.com/java/technologies/javase-jdk14-downloads.html
+   그 이후 환경변수를 바꾸는 곳에 가서 JAVA_HOME 의 위치를 설치된 jdk_14.0.2이런식으로 된 곳으로 바꿔준다.
+   확인 방법으로 cmd에서 java -version 을 입력하면 된다.
+   
+2. Tomcat 8.5 설치 후 압축풀기. 설치 후 localhost:8080을 입력해서 정상인지 확인해본다.
+
+3. Spring Tool Suite 설치. 이클립스에서 Help- eclipse Market place인가 거기 들어가서 sts를 입력 후 설치하면  된다.
+   windows - preferences - general - workspace - text file encoding 을 utf8로 변경
+   
+4. maven 3이상으로 설치. 환경변수에서 MAVEN_HOME을 만든 후 위치를 정해준다. 
+   그 후 path에서 %MAVEN_HOME%\bin을 추가해준다. mvn -version으로 정상설치 확인
+   
+5. STS와 Tomcat 연동. Window → preference → Server → Runtime Environments ->Add 버튼 클릭 → Tomcat 등록하기
+   서버에 만든 웹 프로젝트 등록. 아 여기서 중요한게 이클립스 버전이 중요하다. 그냥 기본을 설치하면 웹 관련
+   도움되는 파일들이 없어서 힘드니까 eclispe ide 톱니바퀴 모양을 설치하자. Tomcat 연결 시에 많이 나는 오류로는 
+   port가 겹쳐서 나는 오류가 있는데 그럼 8082나 8081처럼 다른것으로 바꾸면 된다. 그 후 Tomcat server 오른쪽 클릭 → Add and Remove → Start (초록색 재생 버튼 누르기)
+   index.jsp가 있어야한다. 그거 자동으로 찾아서 나온다. web-content 밑에 넣으면 될듯
+
+6. sts 프로젝트와 깃헙연동. 프로젝트 오른쪽 마우스 클릭 → Team → Share Project. Use or create repository in parent folder of project 에 있는 체크박스를 checkoff 해주고, 아래에 "Create Repository"를 클릭한다.
+   Window → Show view → Other → Git repositories 누르면 잘 생성되었는지 확인 가능. 올리고싶은 깃헙의 원격 주소를 복사해온다.
+   깃헙 repository하나 만들고 code누르면 나오는 코드 복사하면된다. 그 담에 Git Repositories에서 프로젝트를 더블 클릭 하고 아래 항목 중 Remotes → 
+   오른쪽 마우스 클릭 → Create Remote → Configure push를 선택한 다음 →OK
+   제대로 아까 복사했으면 잘 남아있다. 그거로 자동으로 올라가있고 authentication에다가 적어놓고 store하면 계속 아이디랑 비번 안쳐도된다.
+   → Save 한 후에 → Window →Show View →Git Staging 여기가서 staged changes에다가 올리고 싶은거 올리고 push하면 된다.
+   하다가 보면 master[rejected - non-fast -forward]오류가 자주뜬다. 이럴때는 git repository 
+   창에다가 (window->show view->other->git->git repositories) origin가서 configure fetch누르면
+   거기에다가 advanced누른다음에 원래있으면 지워버리고 add하는데 master누르면된다. 그리고 save and fetch하면 끝
+   아 아직 끝 아니다. 그다음에 git repository 밑에 branch->local->master에다가 merge하고 끝
+   그다음에 team->remote->push하면 올라간다.
+
+7. jsp 프로젝트는 File → New → Other → Web → Dynamic Web Project 요렇게하고 target runtime에다가 
+   아파치 톰캣 8.5로한다. 이때못했으면 프로젝트 오른쪽 마우스 클릭 → Properties → Java Build Path → "Libraries" → Add Library → Server Runtime → Apache Tomcat 선택
+   
+   
+보기가 좀 별로이긴한데 줄글로 필요한거 다 적어놓았으니까 그냥 따라만 하면 된다.
